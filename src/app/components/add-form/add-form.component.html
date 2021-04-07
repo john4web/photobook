@@ -1,0 +1,32 @@
+<div>
+  <h1>Add Entry</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div >
+       <label for="name">Photo name: </label>
+       <input type="text" name="name" id="name" [(ngModel)]="name" required>
+    </div>
+    <div >
+       <label for="location">Photo location: </label>
+       <input type="text" name="location" id="location" [(ngModel)]="location" >
+    </div>
+    <label for="notes">Notes:</label>
+    <div>
+       <textarea id="notes" name="notes"
+          rows="5" cols="33" [(ngModel)]="notes">
+       </textarea>
+    </div>
+    <div >
+       <label for="picture-url">URL of the photo:</label>
+       <input type="text" name="picture-url" id="picture-url" [(ngModel)]="pictureURL" required>
+    </div>
+    <div >
+       <button type="submit" [disabled]="isDisabled()">Add Image to my Photobook</button>
+    </div>
+  </form>
+
+  <div>
+    Vorschau:
+    <img src="{{pictureURL}}" alt="">
+  </div>
+
+</div>

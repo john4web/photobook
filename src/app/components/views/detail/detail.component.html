@@ -1,11 +1,10 @@
 <div>
   <button>
-    <a routerLink="/">Back to Home</a>
+    <a routerLink="/home">Back to Home</a>
     </button>
 
-
-    <app-form *ngIf="showForm()"></app-form>
-
-    <app-grid-item-details *ngIf="!showForm()"></app-grid-item-details>
+    <app-add-form *ngIf="showChildComponent() === 'add'"></app-add-form>
+    <app-edit-form *ngIf="showChildComponent() === 'edit'" [readPhoto]="readPhoto"></app-edit-form>
+    <app-grid-item-details *ngIf="showChildComponent() === 'view'" [readPhoto]="readPhoto"></app-grid-item-details>
 </div>
 

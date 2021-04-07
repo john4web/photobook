@@ -1,20 +1,20 @@
-<ng-template [ngIf]="photo !== undefined">
+<ng-template [ngIf]="readPhoto !== undefined">
 
   <h1>GridItemDetails</h1>
 
   <div>
-    <img src="{{photo.pictureURL}}" alt="">
+    <img src="{{readPhoto.pictureURL}}" alt="">
 
     <div>
-      Name: {{photo.name}}
+      Name: {{readPhoto.name}}
     </div>
 
-    <div *ngIf="photo.location !== ''">
-      Location: {{photo.location}}
+    <div *ngIf="readPhoto.location !== ''">
+      Location: {{readPhoto.location}}
     </div>
 
-    <div *ngIf="photo.notes !== ''">
-      Notes: {{photo.notes}}
+    <div *ngIf="readPhoto.notes !== ''">
+      Notes: {{readPhoto.notes}}
     </div>
   </div>
 

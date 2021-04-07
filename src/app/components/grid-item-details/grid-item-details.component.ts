@@ -1,9 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
-
-import { IStorageService } from '../../services/istorage.service';
-import { ISTORAGESERVICE } from '../../services/injection.tokens';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Component, OnInit, Input } from '@angular/core';
 import { Photo } from 'src/app/models/Photo';
 
 @Component({
@@ -13,50 +8,12 @@ import { Photo } from 'src/app/models/Photo';
 })
 export class GridItemDetailsComponent implements OnInit {
 
-  private routeSub: Subscription;
-  private photoID: string;
-  photo: Photo;
+  @Input() readPhoto: Photo;
 
-  //todo: make all member private which are not used outside this class
-
-  constructor(@Inject(ISTORAGESERVICE) private localStorageService: IStorageService, private route: ActivatedRoute, private router: Router) {
-
-
-
-
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
 
-
-
-    this.routeSub = this.route.params.subscribe(params => {
-      this.photoID = params['id'];
-    });
-
-
-    const photo = this.localStorageService.read(this.photoID);
-    //todo: check if read successfully from localstorage
-    console.log(photo);
-    if (photo === null) {
-      console.log("JA");
-      this.router.navigateByUrl('/home');
-    } else {
-      this.photo = photo;
-    }
-
-
-
-
-
   }
-
-
-
-  ngOnDestroy() {
-    this.routeSub.unsubscribe();
-  }
-
 
 }

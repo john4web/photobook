@@ -17,7 +17,6 @@ export class GridComponent implements OnInit {
 
   ngOnInit(): void {
     this.photos = this.localStorageService.readAll();
-    console.log(this.photos);
   }
 
 }

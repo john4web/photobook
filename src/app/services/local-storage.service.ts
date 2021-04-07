@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Photo } from '../models/Photo';
 import { IStorageService } from './istorage.service';
+import { v4 as uuid } from "uuid";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ export class LocalStorageService implements IStorageService {
 
 
   create(photo: Photo): void {
+    photo.id = uuid();
     localStorage.setItem(photo.id, JSON.stringify(photo));
   };
 
@@ -28,7 +30,7 @@ export class LocalStorageService implements IStorageService {
   };
 
   update(photo: Photo): void {
-
+    localStorage.setItem(photo.id, JSON.stringify(photo));
   };
 
   delete(photo: Photo): void {

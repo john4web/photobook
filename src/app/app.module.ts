@@ -12,6 +12,8 @@ import { GridItemComponent } from './components/grid-item/grid-item.component';
 import { GridItemDetailsComponent } from './components/grid-item-details/grid-item-details.component';
 import { localStorageService } from './services/istorage.service';
 import { ISTORAGESERVICE } from './services/injection.tokens';
+import { AddFormComponent } from './components/add-form/add-form.component';
+import { EditFormComponent } from './components/edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ISTORAGESERVICE } from './services/injection.tokens';
     FormComponent,
     GridComponent,
     GridItemComponent,
-    GridItemDetailsComponent
+    GridItemDetailsComponent,
+    AddFormComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,
