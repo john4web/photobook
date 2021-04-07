@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Photo } from 'src/app/models/Photo';
 
 @Component({
   selector: 'app-grid-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grid-item.component.scss']
 })
 export class GridItemComponent implements OnInit {
+
+  @Input() photo: Photo;
 
   constructor() { }
 

@@ -13,13 +13,7 @@ export class LocalStorageService implements IStorageService {
   };
 
   read(id: string): Photo {
-    return {
-      id: "",
-      name: "",
-      location: "",
-      notes: "",
-      pictureURL: ""
-    };
+    return JSON.parse(localStorage.getItem(id));
   };
 
   readAll(): Photo[] {

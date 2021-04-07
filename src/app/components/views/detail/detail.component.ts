@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  showForm() {
+    if (this.router.url.includes('/add') || this.router.url.includes('/edit/')) {
+      return true;
+    }
+    return false;
   }
 
 }

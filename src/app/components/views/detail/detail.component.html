@@ -1,8 +1,11 @@
-<button>
-<a routerLink="/">Back to Home</a>
-</button>
+<div>
+  <button>
+    <a routerLink="/">Back to Home</a>
+    </button>
 
 
-<app-form *ngIf="true"></app-form>
+    <app-form *ngIf="showForm()"></app-form>
 
-<app-grid-item-details *ngIf="true"></app-grid-item-details>
+    <app-grid-item-details *ngIf="!showForm()"></app-grid-item-details>
+</div>
+

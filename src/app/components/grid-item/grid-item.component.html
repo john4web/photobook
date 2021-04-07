@@ -1,1 +1,11 @@
-<p>grid-item works!</p>
+<div>
+  GridItem:
+  Name: {{photo.name}}
+
+
+ <a [routerLink]="['/detail/view', photo.id]"><img src="{{photo.pictureURL}}" alt=""></a>
+
+  <button>
+    <a [routerLink]="['/detail/edit', photo.id]">Edit Entry</a>
+  </button>
+</div>
