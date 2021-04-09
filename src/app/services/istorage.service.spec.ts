@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+/*import { TestBed } from '@angular/core/testing';
 
 import { IStorageService } from './istorage.service';
 
@@ -13,4 +13,4 @@ describe('IStorageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-});
+});*/

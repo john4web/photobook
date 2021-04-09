@@ -33,8 +33,8 @@ export class LocalStorageService implements IStorageService {
     localStorage.setItem(photo.id, JSON.stringify(photo));
   };
 
-  delete(photo: Photo): void {
-
+  delete(id: string): void {
+    localStorage.removeItem(id);
   };
 
   constructor() { }

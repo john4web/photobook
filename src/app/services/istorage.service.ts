@@ -11,7 +11,7 @@ export interface IStorageService {
 
   update(photo: Photo): void;
 
-  delete(photo: Photo): void;
+  delete(id: string): void;
 
 
 }
