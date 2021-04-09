@@ -1,8 +1,8 @@
 <div>
-  <button>
-    <a routerLink="/home">Back to Home</a>
-    </button>
 
+<div class="flex p-5">
+  <a routerLink="/home" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>Back to Home</a>
+</div>
     <app-add-form *ngIf="showChildComponent() === 'add'"></app-add-form>
     <app-edit-form *ngIf="showChildComponent() === 'edit'" [readPhoto]="readPhoto"></app-edit-form>
     <app-grid-item-details *ngIf="showChildComponent() === 'view'" [readPhoto]="readPhoto"></app-grid-item-details>

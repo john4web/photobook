@@ -1,4 +1,8 @@
-<div>
-  <app-grid-item *ngFor="let photo of photos" [photo]="photo"></app-grid-item>
+<div class="min-h-screen flex items-center">
+  <div class="flex-1 max-w-4xl mx-auto p-10">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
+      <app-grid-item *ngFor="let photo of photos" [photo]="photo"></app-grid-item>
+    </div>
+  </div>
 </div>
 
