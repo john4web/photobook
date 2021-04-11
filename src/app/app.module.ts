@@ -32,7 +32,6 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
     AppRoutingModule,
     FormsModule
   ],
-  //providers: [],
   bootstrap: [AppComponent],
   providers: [{
     provide: ISTORAGESERVICE,

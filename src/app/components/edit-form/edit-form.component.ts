@@ -44,7 +44,6 @@ export class EditFormComponent implements OnInit {
       };
 
       this.localStorageService.update(newPhoto);
-      //Todo: check if stored successfully
       this.router.navigateByUrl('/home');
     }
 

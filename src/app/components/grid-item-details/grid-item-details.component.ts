@@ -12,8 +12,6 @@ export class GridItemDetailsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
 }

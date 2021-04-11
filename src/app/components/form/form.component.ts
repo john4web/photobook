@@ -19,14 +19,9 @@ export class FormComponent implements OnInit {
   notes: string = "";
   pictureURL: string = "";
 
-  constructor(@Inject(ISTORAGESERVICE) private localStorageService: IStorageService, private router: Router) {
+  constructor(@Inject(ISTORAGESERVICE) private localStorageService: IStorageService, private router: Router) { }
 
-
-  }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   onSubmit() {
     if (!this.isDisabled()) {
@@ -39,10 +34,8 @@ export class FormComponent implements OnInit {
       };
 
       this.localStorageService.create(newPhoto);
-      //Todo: check if stored successfully
       this.router.navigateByUrl('/home');
     }
-
 
   }
 

@@ -20,10 +20,7 @@ export class AddFormComponent implements OnInit {
 
   constructor(@Inject(ISTORAGESERVICE) private localStorageService: IStorageService, private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
-
+  ngOnInit(): void { }
 
   onSubmit() {
     if (!this.isDisabled()) {
@@ -36,10 +33,8 @@ export class AddFormComponent implements OnInit {
       };
 
       this.localStorageService.create(newPhoto);
-      //Todo: check if stored successfully
       this.router.navigateByUrl('/home');
     }
-
 
   }
 
