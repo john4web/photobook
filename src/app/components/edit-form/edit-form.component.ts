@@ -46,8 +46,11 @@ export class EditFormComponent implements OnInit {
       this.localStorageService.update(newPhoto);
       this.router.navigateByUrl('/home');
     }
+  }
 
-
+  onDelete() {
+    this.localStorageService.delete(this.id);
+    this.router.navigateByUrl('/home');
   }
 
   isDisabled() {
